@@ -1,0 +1,52 @@
+form-element-bar:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #337ab7;
+  height: 2px;
+  display: block;
+  transform: rotateY(90deg);
+  transition: transform .28s ease;
+  will-change: transform;
+}
+
+.form-element-input.hasValue ~ .form-element-bar::after,
+.form-element-input:focus ~ .form-element-bar::after {
+  transform: rotateY(0deg);
+}
+.form-element-input.hasValue ~ .form-element-label,
+.form-element-input:focus ~ .form-element-label {
+  color: #337ab7;
+}
+.form-element-input.hasValue,
+.form-element-input:focus {
+  opacity: 1;
+}
+.form-element-input.hasValue ~ .form-element-label,
+.form-element-input:focus ~ .form-element-label {
+  transform: translateY(-100%) translateY(-0.5em) translateY(-2px);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+label span{
+  display: inline-block;
+  background-color: #6699CC;
+  border-style:solid;
+  border-color: #1c2e45
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+  <button>
+    <input type="submit"  name="" value="Login"
+      p style="position:fixed; left:860px; top:400px; width: 200px; height: 30px;
+      background: orange; border: none" class="login">
+  </button>
+    <img src="homepageimg.png" class="icon" width="550" height="400"> 
